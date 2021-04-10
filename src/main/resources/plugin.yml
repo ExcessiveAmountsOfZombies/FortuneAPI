@@ -1,0 +1,4 @@
+name: FortuneAPI
+version: @version@
+main: com.epherical.fortune.FortuneAPI
+api-version: 1.16
