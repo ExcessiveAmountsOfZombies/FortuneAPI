@@ -47,7 +47,6 @@ public interface Economy {
     boolean hasAccount(UUID uuid);
 
     /**
-     *
      * @param uuid The UUID to use when creating an account.
      * @return Will return true if an account is successfully created and false if unsuccessful.
      */
