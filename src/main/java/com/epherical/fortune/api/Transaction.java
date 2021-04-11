@@ -39,6 +39,10 @@ public interface Transaction {
         Type(Function<BigDecimal, BigDecimal> modifier) {
             this.modifier = modifier;
         }
+
+        public BigDecimal applyModifier(BigDecimal amount) {
+            return this.modifier.apply(amount);
+        }
     }
 
 }
