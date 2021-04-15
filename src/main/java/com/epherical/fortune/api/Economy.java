@@ -48,9 +48,11 @@ public interface Economy {
 
     /**
      * @param uuid The UUID to use when creating an account.
+     * @param name The name that will be associated with the UUID on account creation.
+     * @param accountType The type of account to be created.
      * @return Will return true if an account is successfully created and false if unsuccessful.
      */
-    boolean createAccount(UUID uuid);
+    boolean createAccount(UUID uuid, String name, User.Type accountType);
 
     /**
      * @param uuid The UUID to check.

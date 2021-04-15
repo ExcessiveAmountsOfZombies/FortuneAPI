@@ -44,4 +44,18 @@ public interface User {
      * @return Return the {@link Transaction} associated with the money being sent.
      */
     Transaction sendMoneyTo(BigDecimal amount, User user);
+
+    /**
+     * The type of account this user is associated with. Implementations can define their own limitations if they want to
+     * discriminate against player vs non player accounts
+     * @return The type of account associated with the user.
+     */
+    Type userType();
+
+    interface Type {
+        Type PLAYER = () -> "PLAYER";
+        Type NPC = () -> "NPC";
+        
+        String accountType();
+    }
 }
